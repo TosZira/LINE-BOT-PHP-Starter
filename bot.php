@@ -1,6 +1,10 @@
 <?php
 $access_token = 'FyE8k5WmYR/S/Sf0c2A0T3wNNoVfr4g9wI9L796VMYeKJgA2hgDk4RLGLOQpcXiQbq0rfXp1QQq7LdG5N6d2qT4ZmB5mndvlRx/MrF94fHJdzPBJyBHepf3eZoBGS/KTmKovj/tY4RYHiQQMECV8zgdB04t89/1O/w1cDnyilFU=';
 
+$img_url = "https://cdn.shopify.com/s/files/1/0379/7669/products/sampleset2_1024x1024.JPG?v=1458740363";
+$outputText = new LINE\LINEBot\MessageBuilder\ImageMessageBuilder($img_url, $img_url);
+$response = $bot->replyMessage($event->getReplyToken(), $outputText);
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
